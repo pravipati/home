@@ -1,0 +1,62 @@
+@keyframes blink {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes blink {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'courier';
+}
+
+.terminal {
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 10%;
+  height: 35%;
+  min-height: 300px;
+  width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#outputField {
+  overflow: inherit;
+  max-height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+}
+
+span, span:focus {
+  outline: none;
+  font: inherit;
+  border: none;
+  width: 0;
+}
+.old {
+  opacity: 0.4;
+}
+
+.input {
+  position: absolute;
+  white-space: pre;
+  bottom: 0;
+}
+
+.cursor-cont {
+  background: white;
+  margin-right: -2px;
+  position: relative;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  -webkit-animation: blink 1s infinite;
+}
