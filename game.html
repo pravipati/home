@@ -11,6 +11,9 @@
     .circle {
       position: relative;
     }
+    .rectangle {
+      position: relative;
+    }
   </style>
 </head>
 <body>
@@ -24,8 +27,12 @@
     width: '300px',
     height: '300px'
   }
-  var shipDetails = {
+  var ship = {
     x: 0,
+    bullet: {
+      height: 5,
+      width: 2
+    }
   }
   d3.select('.container').append('svg:svg')
     .attr('height', gameOptions.height)
@@ -37,18 +44,32 @@
     .attr('stroke-width', '1')
     .attr('fill', 'black')
     .attr('cy', gameOptions.height)
-    .attr('cx', shipDetails.x)
+    .attr('cx', ship.x)
 
   //TODO: Give the ship SVG a centered position
 
   d3.select('body')
     .on('keydown', function(){
       var keyCode = d3.event.keyCode;
+      if (keyCode === 32) {
+        d3.select('.container').append('svg:rect')
+        .attr('y', gameOptions.height)
+        .attr('height', ship.bullet.height)
+        .attr('width', ship.bullet.width)
+        .attr('stroke', 'black')
+        .attr('stroke-width', '1')
+        .attr('fill', 'black')
+        //TODO: on space event create a new bullet
+        //Bullet should fire off
+          //is there a buit in d3 way to transition? 
+          //do I need to manually move the location of the bullet one unit at a time?
+      }
       var direction = keyCode === 37 ? -7 : keyCode === 39 ? 7 : null;
-      //TODO: get svg element to move left and right
-      shipDetails.x += direction;
+      ship.x += direction;
       d3.select('.ship')
-        .attr('cx', shipDetails.x)
+        .attr('cx', ship.x)
     })
+
+
 </script>
 </html>
