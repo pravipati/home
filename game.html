@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>Space</title>
+  <style type="text/css">
+    .container {
+      border-style: solid;
+      border-color: black;
+      border-width: 1px;
+      position: absolute;
+    }
+    .circle {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <svg height="50" width="50">
+    <circle cx="50" cy="50" r="10" stroke="black" stroke-width="1" fill="black" />
+  </svg>
+  <!-- <symbol id="icon-pacman" viewBox="0 0 1024 1024">
+    <title>pacman</title>
+    <path class="path1" d="M964.73 178.804c-93.902-109.45-233.21-178.804-388.73-178.804-282.77 0-512 229.23-512 512s229.23 512 512 512c155.52 0 294.828-69.356 388.728-178.804l-324.728-333.196 324.73-333.196zM704 120.602c39.432 0 71.398 31.964 71.398 71.398 0 39.432-31.966 71.398-71.398 71.398s-71.398-31.966-71.398-71.398c0-39.432 31.966-71.398 71.398-71.398z"></path>
+  </symbol> -->
+</div>
+</body>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  var gameOptions = {
+    width: '300px',
+    height: '300px'
+  }
+  d3.select('.container').append('svg:svg')
+    .attr('height', gameOptions.height)
+    .attr('width', gameOptions.width)
+
+  d3.select('body')
+    .on('keydown', function(){
+      var keyCode = d3.event.keyCode;
+      var direction = keyCode === 37 ? 'Left' : keyCode === 39 ? 'Right' : null
+      console.log(direction);
+    })
+</script>
+</html>
