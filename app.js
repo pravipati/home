@@ -12,8 +12,8 @@ Object.prototype.extend = function(e) {
 
 var Pavan = function() {
     var e = this;
-    this.resume = ["PAVAN RAVIPATI", "===============", "Software Engineer", "psravipati@gmail.com", "", "EXPERIENCE", "==========", "Web Developer", "Artsicle.com", "May 2013 - Present (1 yr 3 mts)", "", "Financial Analyst", "Student and Foundation Fund", "Jan 13 - May 13 (5 mts)", "", "Software Engineer", "UNC Information Management and Technology", "Sep 12 - May 13 (9 mts)", "", "Creator", "StrictlyPlatonic.net", "Aug 11 - May 13 (1 yr 10 mts)", "", "Drill Instructor", "Israel Defense Forces Israel", "Nov 08 - Nov 09 (1 yr 1 mth)", "", "LANGUAGES", "=========", "Hebrew", "", "SKILLS", "======", "Ruby on Rails", "PHP", "C#", "ASP.NET", "MySQL", "JavaScript", "jQuery", "CoffeeScript", "CSS3", "Financial Modeling", "", "EDUCATION", "=========", "University of Northern Colorado", "Bachelor's degree, Finance, 07 - 13"].join("<br/>");
-    this.projects = [{name: "Example Project 1",url: "http://google.com",description: "founding intern."}];
+    this.resume = ["PAVAN RAVIPATI", "===============", "Software Engineer", "psravipati@gmail.com", "", "EXPERIENCE", "==========", "Hacker in Residence", "Hack Reactor", "April 2015 - Present", "", "Student", "Hack Reactor", "Feb 2015 - May 2015", "", "Account Executive", "ClearSlide", "2013 - 2014", "", "Co-founder", "Twindom", "2012 - 2013", "", "SKILLS", "======", "Javascript", "HTML5/CSS3", "Angular.js", "Backbone.js", "Node.js", "JQuery", "Git", "MongoDB", "Mongoose.js", "Grunt", "Karma", "", "EDUCATION", "=========", "University of California, Berkeley", "Film & Media 2011"].join("<br/>");
+    this.projects = [{name: "Crew",url: "http://trycrewapp.com",description: "I worked primarily with Socket.io on the backend and designed the frontend in Angular / Ionic. I also designed the UI using Sketch."}];
     this.commandHeaders = {commands: "AVAILABLE COMMANDS",contact: "CONTACT INFO",about: "ABOUT",projects: "RECENT PROJECTS"};
     this.caretToEnd = function() {
         if (window.getSelection && document.createRange) {
@@ -105,6 +105,11 @@ var Pavan = function() {
         },github: function() {
             e.customInput("Open Github profile? (y/n)", {y: function() {
                     window.open("http://www.github.com/pravipati", "_blank")
+                },n: function() {
+                }})
+        },stackoverflow: function() {
+            e.customInput("Open Stack Overflow profile? (y/n)", {y: function() {
+                    window.open("http://stackoverflow.com/users/4224424/pavan-ravipati", "_blank")
                 },n: function() {
                 }})
         },about: function() {

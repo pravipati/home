@@ -13,6 +13,8 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: 'courier';
+  background-color: #073642;
+  color: #657B83;
 }
 
 .terminal {
@@ -51,7 +53,7 @@ span, span:focus {
 }
 
 .cursor-cont {
-  background: white;
+  cursor: pointer;
   margin-right: -2px;
   position: relative;
 }
